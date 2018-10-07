@@ -25,3 +25,6 @@ function destroyToken()
 {
 	unset($_SESSION['user_token']);
 }
+
+
+?>
