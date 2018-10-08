@@ -11,6 +11,23 @@ class Cookie{
 	{
 		return $_COOKIE[$name];
 	}
+
+	public static function put($name, $value, $expiry)
+	{
+		if(setcookie($name,$value, time()+ $expiry, '/'))
+		{
+			return true;
+		}
+		return false;
+
+	}
+
+	public static function genCookieName()
+		{
+			$cookieId = rand(0,100);
+
+			return  $cookieId;
+		}
 }
 
 ?>
