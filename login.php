@@ -12,7 +12,7 @@
 	<title>Login</title>
 </head>
 <body>
-	<form method="post" action="page1.php">
+	<form name="loginForm" method="post" action="page1.php" onsubmit="return validateForm()">
 		
 		Username : <br/>
 		<input type="text" name="username">
@@ -24,6 +24,25 @@
 		
 		
 	</form>
+
+	<script>
+		function validateForm() 
+		{
+    		var x = document.forms["loginForm"]["username"].value;
+    		var y = document.forms["loginForm"]["password"].value
+   		 	if ((x == "") || (y== "")) 
+   		 	{
+       			 alert("Name must be filled out");
+        		 return false; 
+        	}
+        	else if((x != "admin") || (y != "password"))
+       		 {
+        		alert(" Wrong Username or Password");
+        		return false;
+        	}
+		}
+</script>
+
 </body>
 </html>
 

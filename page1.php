@@ -22,13 +22,13 @@ echo Token::check(Input::get('token'));
 	<head>
 		<title> Second page form</title> 
 	
-	</head> action="page1.php">
-			Data : <input typ
+	</head> 
+			
 	<body>
 
-		<form method="post"e="text" id="datavals" name ="data">
+		<form action="page1.php" method="post">
+			Data : <input type="text" name="datavals" id="datavals">
 			<br>
-			<input type="label" name="">
 			<input type="hidden" id="token" name="token" value= "<?php echo Token::genToken() ?>">
 			<input id="sbmit" type="submit" name="submit CSRF Val">
 		</form>
